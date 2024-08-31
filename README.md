@@ -11,24 +11,24 @@ Hence to start doing analysis at CMS, you should have a CERN account first. Once
 - Get your grid certificate from https://ca.cern.ch/ca/user/Request.aspx?template=ee2user and import it to your user space ("public" advised).
 - Make Sure your account is registered in CERN VOMS(use firefox to do this and have the myCertificate.p12 file inserted in the browser). https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideLcgAccess#How_to_register_in_the_CMS_VO
 - In your user space do
-mkdir .globus
-cd .globus/
-mv /afs/cern.ch/user/u/username/myCertificate.p12 
-rm -f usercert.pem
-rm -f userkey.pem
-openssl pkcs12 -in myCertificate.p12 -clcerts -nokeys -out usercert.pem
-openssl pkcs12 -in myCertificate.p12 -nocerts -out userkey.pem
-chmod 400 userkey.pem
-chmod 400 usercert.pem
-voms-proxy-init --rfc --voms cms -valid 192:00
+  * mkdir .globus
+  * cd .globus/
+  * mv /afs/cern.ch/user/u/username/myCertificate.p12 
+  * rm -f usercert.pem
+  * rm -f userkey.pem
+  * openssl pkcs12 -in myCertificate.p12 -clcerts -nokeys -out usercert.pem
+  * openssl pkcs12 -in myCertificate.p12 -nocerts -out userkey.pem
+  * chmod 400 userkey.pem
+  * chmod 400 usercert.pem
+  * voms-proxy-init --rfc --voms cms -valid 192:00
 
 - Now you have access to make a CMS workfield and install all the required libraries. To make a CMS environment do the following,
-Go to eos cd /eos/user/u/username
-export SCRAM_ARCH=slc7_amd64_gcc1
-cmsrel CMSSW_10_6_20
-cd CMSSW_10_6_20/
-cd src/
-cmsenv
+  * Go to eos cd /eos/user/u/username
+  * export SCRAM_ARCH=slc7_amd64_gcc1
+  * cmsrel CMSSW_10_6_20
+  * cd CMSSW_10_6_20/
+  * cd src/
+  * cmsenv
 (You can change the CMSSW version as per requirement)
 
 
