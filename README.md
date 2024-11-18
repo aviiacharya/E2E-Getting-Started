@@ -1,5 +1,5 @@
 # E2E-Getting-Started
-End-to-End Machine Learningrefers to the process of developing, deploying, and maintaining machine learning models from start to finish, encompassing all the stages required to take a model from initial conception to its practical application. The key components of End-to-End Machine Learning are data collection, data preprocessing, feature engineering, model selection, model training, model evaluation, model deployment, model monitoring and maintenance, interpretability and explainability, and scalability and performance optimization.
+End-to-End Machine Learning refers to the process of developing, deploying, and maintaining machine learning models from start to finish, encompassing all the stages required to take a model from initial conception to its practical application. The key components of End-to-End Machine Learning are data collection, data preprocessing, feature engineering, model selection, model training, model evaluation, model deployment, model monitoring and maintenance, interpretability and explainability, and scalability and performance optimization.
 
 Doing E2E ML with the CMS experiment involves processing raw data from the CMS detector(or you simulate your own data as per CMS requirements, engineering relevant features, training models for particle identification and event classification, deploying these models for real-time or offline analysis, continuously monitoring their performance, and interpreting results to gain insights into particle physics.
 
@@ -55,13 +55,16 @@ Hence to start doing analysis at CMS, you should have a CERN account first. Once
 - So, that was a lot of information. I just want to be thorough.
 - Next is ntupules. And Parquet conversion. Use RHAnalyzer the same way to get ntuple files. There's a script in MLAnalyzer called "convert_root2pq_jet_tracker.py". It takes one ntuple root file as input and turns it into the parquet file. Set up a python2 environment, because the parquet conversion (at the moment) is only compatible with python 2. Everything you are doing, are within the src directory. I will have a separate block to explain crab file setup and the running process.
 - Alright, now that you have the parquet files, you can start the actual training.
+- But first let's generate the files.
 
+### Gen script and sim script 
+- Instructions [here](https://github.com/aviiacharya/CMSFiles/)
   
 ### Training
 
 ### Condor and Crab setup
 
-### Gen script and sim script 
+ 
 
   
 
