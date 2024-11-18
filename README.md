@@ -59,10 +59,19 @@ Hence to start doing analysis at CMS, you should have a CERN account first. Once
 
 ### Gen script and sim script 
 - Instructions [here](https://github.com/aviiacharya/CMSFiles/)
-  
-### Training
 
 ### Condor and Crab setup
+- Condor and crab set ups are cloud based convenient computing systems from CERN-lxplus and FermiLab-lpc. [Here](https://github.com/aviiacharya/CMSFiles)(shouldn't be confusing from the naming conventions) are the crab files for the processes. The twiki detailing everything can be found [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile).
+- Once you have the input [config-file](https://github.com/aviiacharya/CMSFiles/blob/main/gen_TToHadronic_m172To175_pT100To300_etam2p5To2p5_local.py) set up, you should change the the respective [crab-file's](https://github.com/aviiacharya/CMSFiles/blob/main/crabConfig_gen_TToHadronic.py) number of Units for Job and TotalUnits from line 27-31 to get a certain number of events for your batch jobs. In this crab file I am generating 10M samples/events. Next in-line for the [simulation](https://github.com/aviiacharya/CMSFiles/blob/main/crabConfig_sim_TToHadronic.py). It's file based. So you can keep it as it is but just change the input root files. And same for [producing](https://github.com/aviiacharya/CMSFiles/blob/main/crabConfig_RHAnalyzer.py) ntuples. The output files, I am saving it in my eos space because that space provides a lot memory.
+- To submit the file, the command is "crab submit crab-file.py". To check the status of it's crab status -d filepath and so on.
+- If you want to use the condor batch jobs in lxplus, please follow the [this](https://twiki.cern.ch/twiki/bin/view/CENF/NeutrinoClusterCondorDoc) twiki. 
+  
+
+
+### Training
+- Will be updated soon.
+
+
 
  
 
