@@ -67,20 +67,9 @@ Hence to start doing analysis at CMS, you should have a CERN account first. Once
 - If you want to use the condor batch jobs in lxplus, please follow the [this](https://twiki.cern.ch/twiki/bin/view/CENF/NeutrinoClusterCondorDoc) twiki. 
   
 
-
 ### Training
 - Will be updated soon.
-
-
-
- 
-
-  
-
-
-
-
-
+- [Following](https://github.com/bhbam/multiNode_multiGpu_training) 
 
 
 ### Plotting
